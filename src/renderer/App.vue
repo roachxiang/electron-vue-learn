@@ -14,6 +14,7 @@
     * {
     margin: 0;
     padding: 0;
+    font-family:"Microsoft YaHei",Arial;
   }
 
   html,
