@@ -49,6 +49,10 @@ export default {
 </script>
 
 <style>
+  .el-container {
+    height: 100%;
+  }
+
   .el-header {
     background-color: #E6EAED;
     color: #333;
