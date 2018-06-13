@@ -4,7 +4,7 @@
       <div>
         <el-row :gutter="10">
           <el-col :span="4">
-            <div><img :src="imgUrl" width="100%" height="50px"></div>
+            <div><img :src="imgUrl" width="150%" height="50px"></div>
           </el-col>
           <el-col :span="16">
             <div class="title">一证通电子录入系统</div>
@@ -18,7 +18,20 @@
         </el-row>
       </div>
     </el-header>
-    <el-main>Main</el-main>
+    <el-main>
+      <el-row type="flex" class="row-bg" justify="center">
+        <el-col :span="4"></el-col>
+        <el-col :span="8">
+          <span class="op-text">手工录入</span>
+          <i style='font-size:75px' class="el-icon-edit-outline" @click="click"></i>
+        </el-col>
+        <el-col :span="8">
+          <span class="op-text">批量导入</span>
+          <i style='font-size:75px' class="el-icon-upload" @click="click"></i>
+        </el-col>
+        <el-col :span="4"></el-col>
+      </el-row>
+    </el-main>
   </el-container>
 </template>
 
@@ -78,13 +91,29 @@ export default {
   }
 
   .el-main {
-    background-color: #E9EEF3;
+    background-color: #FFFFFF;
     color: #333;
     text-align: center;
-    line-height: 160px;
+    line-height: 400px;
   }
   
   body > .el-container {
     margin-bottom: 40px;
+  }
+
+  .op-text {
+    position: relative;
+    top: 2em;
+    right: -3em;
+  }
+
+  .el-main .el-icon-edit-outline{
+    -webkit-app-region: no-drag;
+    right: -3em;
+  }
+
+  .el-main .el-icon-upload{
+    -webkit-app-region: no-drag;
+    right: -3em;
   }
 </style>
